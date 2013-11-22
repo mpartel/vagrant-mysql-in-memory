@@ -2,9 +2,13 @@ vagrant-mysql-in-memory
 =======================
 
 Simple vagrant profile. It includes only mysql server, where database is stored at ramdisk. 
-This virtual machine should implement tweaks listed here http://drupal.org/node/466972.
 
-Hopefully, this should boost significantly simpletest test suite execution on my drupal installation :)
+Forked from https://github.com/harijari/vagrant-mysql-in-memory
+
+Changes:
+- put all databases on ramdisk instead of only 'test'
+- simplified set up to only use shell scripts
+- replaced port forwarding with dedicated IP (due to subjective taste)
 
 Installation and usage
 =======================
@@ -21,6 +25,5 @@ Access details
 ======================
 * db password: _root_
 * db login: _root_
-* db host: _127.0.0.1_ (host machine)
-* db port: _13306_
-* test database (stored at ramdisk): _test_
+* db host: _192.168.50.14_
+* db port: _3306_
