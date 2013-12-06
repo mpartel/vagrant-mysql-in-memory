@@ -15,8 +15,8 @@ Vagrant.configure("2") do |config|
   # computers to access the VM, whereas host only networking does not.
   #config.vm.forward_port 3306, 13306
 
-  config.vm.provision :shell, :path => "shell/install_mysql.sh"
-  config.vm.provision :shell, :path => "shell/ramdisk.sh"
-  config.vm.provision :shell, :path => "shell/remote_mysql_root.sh"
+  config.vm.provision :shell, :path => "shell/01_install_mysql.sh"
+  config.vm.provision :shell, :path => "shell/02_remote_mysql_root.sh"
+  config.vm.provision :shell, :path => "shell/03_ramdisk.sh"
 
 end
